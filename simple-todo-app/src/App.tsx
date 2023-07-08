@@ -3,6 +3,8 @@ import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState<string[]>([]);
+
+  const handleSubmit = () => {};
   return (
     <>
       <form>
