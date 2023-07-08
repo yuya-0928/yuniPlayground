@@ -9,6 +9,8 @@ function App() {
     setTasks([...tasks, event.currentTarget.value]);
   };
 
+  const handleOnChange = () => {};
+
   return (
     <>
       <form onSubmit={handleSubmit}>
