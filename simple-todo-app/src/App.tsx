@@ -19,7 +19,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label>
           タスク：
-          <input type="text" name="task" />
+          <input type="text" name="task" onChange={handleOnChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
