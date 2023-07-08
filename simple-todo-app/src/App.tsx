@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [tasks, setTasks] = useState<string[]>([]);
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   return (
     <>
       <form>
