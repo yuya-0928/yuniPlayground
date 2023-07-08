@@ -14,7 +14,8 @@ function App() {
     setTask(event.currentTarget.value);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const tasks = localStorage.getItem("tasks");
   return (
     <>
       <form onSubmit={handleSubmit}>
