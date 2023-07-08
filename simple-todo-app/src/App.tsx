@@ -14,6 +14,7 @@ function App() {
     setTask(event.currentTarget.value);
   };
 
+  useEffect(() => {}, []);
   return (
     <>
       <form onSubmit={handleSubmit}>
