@@ -5,6 +5,9 @@ function App() {
   const [tasks, setTasks] = useState<string[]>([]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    setTasks([...tasks, event.currentTarget.value]);
+  };
+
   return (
     <>
       <form>
