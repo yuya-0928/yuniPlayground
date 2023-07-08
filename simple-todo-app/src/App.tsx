@@ -10,7 +10,7 @@ function App() {
     setTasks([...tasks, event.currentTarget.value]);
   };
 
-  const handleOnChange = () => {};
+  const handleOnChange = (event: React.FormEvent<InputElement>) => {};
 
   return (
     <>
