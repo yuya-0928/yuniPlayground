@@ -7,6 +7,7 @@ function App() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    localStorage.setItem("tasks", JSON.stringify([...tasks, task]));
     setTasks([...tasks, task]);
   };
 
