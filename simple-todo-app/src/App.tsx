@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           タスク：
           <input type="text" name="task" />
