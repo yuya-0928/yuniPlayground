@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setTasks([...tasks, event.currentTarget.value]);
+    setTasks([...tasks, task]);
   };
 
   const handleOnChange = (event: React.FormEvent<HTMLInputElement>) => {
