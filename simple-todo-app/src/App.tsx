@@ -3,6 +3,7 @@ import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState<string[]>([]);
+  const [task, setTask] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
