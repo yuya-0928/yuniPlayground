@@ -14,6 +14,10 @@ function App() {
     setTask(event.currentTarget.value);
   };
 
+  const refreshTaskList = () => {
+    localStorage.removeItem("tasks");
+  };
+
   useEffect(() => {
     const tasks = localStorage.getItem("tasks");
     if (tasks) {
@@ -30,7 +34,7 @@ function App() {
         </label>
         <input type="submit" value="Submit" />
       </form>
-      {console.log(tasks)}
+      <button onClick={() => refreshTaskList()}>タスク全削除</button>
     </>
   );
 }
