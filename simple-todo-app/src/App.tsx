@@ -3,7 +3,9 @@ import "./App.css";
 import { useEffect } from "react";
 
 type Task = {
+  id: number;
   content: string;
+  done: boolean;
 };
 
 const TaskList = (tasks: Task) => {
@@ -19,9 +21,17 @@ function App() {
   const [task, setTask] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const store_tasks = localStorage.getItem("tasks");
+    let task_id: number;
+    if (store_tasks) {
+      task_id = tasks.length + 1;
+    } else {
+      task_id = 1;
+    }
+
     localStorage.setItem(
       "tasks",
-      JSON.stringify([...tasks, { content: task }])
+      JSON.stringify([...tasks, { id: task_id, content: task, done: false }])
     );
   };
 
