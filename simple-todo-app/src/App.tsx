@@ -5,6 +5,15 @@ import { useEffect } from "react";
 type Task = {
   content: string;
 };
+
+const TaskList = (tasks: Task) => {
+  return (
+    <>
+      <p>{tasks.content}</p>
+    </>
+  );
+};
+
 function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [task, setTask] = useState<string>("");
@@ -41,6 +50,9 @@ function App() {
         <input type="submit" value="Submit" />
       </form>
       <button onClick={() => refreshTaskList()}>タスク全削除</button>
+      {tasks.map((element) => {
+        return TaskList(element);
+      })}
     </>
   );
 }
