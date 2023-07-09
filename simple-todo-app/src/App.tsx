@@ -50,6 +50,8 @@ function App() {
         <input type="submit" value="Submit" />
       </form>
       <button onClick={() => refreshTaskList()}>タスク全削除</button>
+      <h1>タスク一覧</h1>
+      <p>タスクの数：{tasks.length}</p>
       {tasks.map((element) => {
         return TaskList(element);
       })}
