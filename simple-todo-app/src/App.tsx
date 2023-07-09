@@ -7,7 +7,6 @@ function App() {
   const [task, setTask] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
     localStorage.setItem("tasks", JSON.stringify([...tasks, task]));
   };
 
