@@ -11,7 +11,10 @@ type Task = {
 const TaskList = (tasks: Task) => {
   return (
     <>
-      <p>{tasks.content}</p>
+      <div>
+        <input type="checkbox" id={tasks.id.toString()} onChange={() => } />
+        id:{tasks.id} {tasks.content}
+      </div>
     </>
   );
 };
