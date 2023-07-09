@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { useEffect } from "react";
 
 function App() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -16,6 +17,11 @@ function App() {
 
   useEffect(() => {
     const tasks = localStorage.getItem("tasks");
+    if (tasks) {
+      setTasks(JSON.parse(tasks) as string[]);
+    }
+  }, []);
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -25,6 +31,7 @@ function App() {
         </label>
         <input type="submit" value="Submit" />
       </form>
+      {console.log(tasks)}
     </>
   );
 }
